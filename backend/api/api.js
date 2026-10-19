@@ -26,6 +26,24 @@ router.get('/test', (request, response) => {
     });
 });
 
+router.get('/vote', (request, response) => {
+    response.status(200).json({
+        message: 'Ez a végpont működik.'
+    });
+});
+
+router.post('/vote', (request, response) => {
+    response.status(200).json({
+        message: 'Ez a végpont működik.',
+        option1: "Orbán Viktor",
+        option2:"Magyar Péter",
+        objektum:{
+            option1: 3,
+            option2:5
+        }
+    });
+});
+
 //?GET /api/testsql
 router.get('/testsql', async (request, response) => {
     try {
